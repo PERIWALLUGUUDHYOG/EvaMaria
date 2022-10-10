@@ -36,6 +36,10 @@ DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Anurag")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Anurag_files')
 
+# Shortener
+SHORTENER = ""
+SHORTENER_API = ""
+
 # Others
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'MOVIES_ZILAA')
