@@ -84,6 +84,14 @@ async def get_search_results(query, file_type=None, max_results=10, offset=0, fi
     try:
         regex = re.compile(raw_pattern, flags=re.IGNORECASE)
     except:
+    try:
+    SHORTENER = getConfig('SHORTENER')
+    SHORTENER_API = getConfig('SHORTENER_API')
+    if len(SHORTENER) == 0 or len(SHORTENER_API) == 0:
+        raise KeyError
+    except:
+    SHORTENER = None
+    SHORTENER_API = None
         return []
 
     if USE_CAPTION_FILTER:
